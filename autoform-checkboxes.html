@@ -1,0 +1,18 @@
+<head>
+  <title>autoform-checkboxes</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+  {{#autoForm id="test" schema=testSchema}}
+    {{> afQuickField name='check'}}
+    {{#if afFieldValueIs name='check' value=true}}
+      Checked!
+    {{else}}
+      Not Checked!
+    {{/if}}
+  {{/autoForm}}
+</template>
